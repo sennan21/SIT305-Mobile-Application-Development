@@ -6,13 +6,14 @@ Unit: `SIT305`
 
 ## 1. LLM Declaration Statement
 
-I used a Large Language Model to assist with selected parts of this task. AI support was used for the initial structure of the Android app, parts of the conversion logic, validation and error-handling ideas, debugging some Gradle and Android setup issues, and drafting the first version of the Gemini Nano research report. I reviewed the final code, tested the app, simplified the project structure, and edited the written content before submission.
+I used a Large Language Model to assist with selected parts of this task. AI support was used for the initial structure of the Android app, parts of the conversion logic, validation and error-handling ideas, debugging some Gradle and Android setup issues, and drafting the first version of the Gemini Nano research report. I also used follow-up LLM help to fix issues in `MainActivity.kt` related to dropdown state, input validation, and invalid conversion handling after reviewing the app behaviour. I reviewed the final code, tested the app, simplified the project structure, and edited the written content before submission.
 
 The parts that were most influenced by AI were:
 
 - the dropdown state logic and selected-unit handling in `MainActivity.kt`
 - the validation logic for empty input, non-numeric input, and negative fuel values
 - the conversion logic for currency, fuel, and temperature
+- fixing stale dropdown selections and restoring safe conversion behaviour in `MainActivity.kt`
 - troubleshooting build issues related to Java, Gradle, and Android SDK setup
 - the first draft of the Gemini Nano research report
 
@@ -40,11 +41,11 @@ YouTube link: `Add your clickable YouTube link here`
 
 ## 4. GitHub Repository Link
 
-GitHub repository: `Add your public GitHub repository link here`
+GitHub repository: [https://github.com/sennan21/SIT305-Mobile-Application-Development.git](https://github.com/sennan21/SIT305-Mobile-Application-Development.git)
 
 ## 5. LLM Conversation Link
 
-LLM conversation link: `Add your clickable conversation link here if available`
+LLM conversation link: [https://chatgpt.com/share/69bf789b-8238-800e-a665-41f66ffa16d0](https://chatgpt.com/share/69bf789b-8238-800e-a665-41f66ffa16d0)
 
 If no public shareable conversation link is available for the platform used, state that clearly in the final exported PDF and keep the prompt and explanation shown in the declaration section above.
 

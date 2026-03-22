@@ -9,8 +9,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
@@ -104,7 +104,7 @@ fun TravelCompanionApp() {
     var input by rememberSaveable { mutableStateOf("") }
     var result by rememberSaveable { mutableStateOf("Result will appear here") }
 
-    val fromUnit = selectedCategory.units.first { it.code == fromCode }
+    val fromUnit = selectedCategory.units.firstOrNull { it.code == fromCode } ?: selectedCategory.units.first()
     val availableToUnits = selectedCategory.units.filter { it.group == fromUnit.group }
     val toUnit = availableToUnits.firstOrNull { it.code == toCode } ?: availableToUnits.first()
 
@@ -112,17 +112,26 @@ fun TravelCompanionApp() {
         selectedCategory = category
         fromCode = category.units.first().code
         toCode = category.units.last().code
+        input = ""
         result = "Result will appear here"
     }
 
     fun convert() {
         val value = input.toDoubleOrNull()
+
         when {
-            input.isBlank() -> Toast.makeText(context, "Enter a value", Toast.LENGTH_SHORT).show()
-            value == null -> Toast.makeText(context, "Enter numbers only", Toast.LENGTH_SHORT).show()
+            input.isBlank() -> {
+                Toast.makeText(context, "Enter a value", Toast.LENGTH_SHORT).show()
+            }
+
+            value == null -> {
+                Toast.makeText(context, "Enter numbers only", Toast.LENGTH_SHORT).show()
+            }
+
             selectedCategory == AppCategory.FUEL && value < 0 -> {
                 Toast.makeText(context, "Fuel values cannot be negative", Toast.LENGTH_SHORT).show()
             }
+
             else -> {
                 val converted = convertValue(selectedCategory, fromUnit, toUnit, value)
                 if (converted == null) {
