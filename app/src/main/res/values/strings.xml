@@ -1,4 +1,24 @@
 <resources>
-    <string name="app_name">Travel Companion</string>
+    <string name="app_name">Personal Event Planner</string>
+    <string name="events">Events</string>
+    <string name="upcoming_events">Upcoming Events</string>
+    <string name="event_list_hint">Keep track of upcoming plans, trips, and appointments.</string>
+    <string name="no_events_yet">No events added yet.</string>
+    <string name="add_event">Add Event</string>
+    <string name="edit_event">Edit Event</string>
+    <string name="update_event">Update Event</string>
+    <string name="save_event">Save Event</string>
+    <string name="delete_event">Delete Event</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="title_hint">Title</string>
+    <string name="location_hint">Location</string>
+    <string name="select_date_time">Select Date and Time</string>
+    <string name="category">Category</string>
+    <string-array name="event_categories">
+        <item>Work</item>
+        <item>Social</item>
+        <item>Travel</item>
+        <item>Personal</item>
+    </string-array>
 </resources>
-

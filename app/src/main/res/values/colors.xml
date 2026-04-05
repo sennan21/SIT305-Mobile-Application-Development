@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="gray_600">#555555</color>
+    <color name="bottom_nav_active">#000000</color>
+    <color name="bottom_nav_inactive">#666666</color>
+</resources>
