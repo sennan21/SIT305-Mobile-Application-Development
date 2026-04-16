@@ -9,3 +9,10 @@
 DS_Store
 .DS_Store
 /gradle/gradle-daemon-jvm.properties
+/docs/
+/4.1/docs/
+/4.1/*.pdf
+/researchpapers/
+/chat-upload-bundle/
+/Main_file.txt
+/SIT305-*.pdf
